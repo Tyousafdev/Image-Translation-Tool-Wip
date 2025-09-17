@@ -1,0 +1,8 @@
+bubble_classifier.pth
+best.pt
+ocrenv/
+craft_pytorch
+dataset/
+Manga109_released_2023_12_07/
+Manga Bubble.v7i.yolov8/
+Manga Bubble.v7i.yolov8.zip

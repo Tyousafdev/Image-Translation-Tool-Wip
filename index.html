@@ -1,0 +1,17 @@
+<input type="file" id="fileInput">
+<pre id="result"></pre>
+
+<script>
+document.getElementById('fileInput').addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  const formData = new FormData();
+  formData.append('file', file);
+
+  const res = await fetch('http://localhost:8000/ocr', {
+    method: 'POST',
+    body: formData
+  });
+  const data = await res.json();
+  document.getElementById('result').textContent = data.text;
+});
+</script>
